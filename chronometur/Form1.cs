@@ -10,7 +10,6 @@ namespace chronometur
         }
 
         private int seconds;
-        private bool timeon;
         private void button2_Click(object sender, EventArgs e)
         {
             timer1.Start();
@@ -28,11 +27,14 @@ namespace chronometur
         private void Form1_Load(object sender, EventArgs e)
         {
             seconds = 0;
-            while (true)
-            {
-                seconds++;
-                label1.Text = ConvertToMinutes(seconds).ToString();
-            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            seconds++;
+            string time = (60 * ConvertToMinutes(seconds)).ToString() + ":" + seconds.ToString();
+
+            label1.Text = time;
         }
     }
 }
