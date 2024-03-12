@@ -32,7 +32,7 @@ namespace chronometur
         private void timer1_Tick(object sender, EventArgs e)
         {
             seconds++;
-            string time = (60 * ConvertToMinutes(seconds)).ToString() + ":" + seconds.ToString();
+            string time = (ConvertToMinutes(seconds)).ToString() + ":" + (seconds - (60 * ConvertToMinutes(seconds))).ToString();
 
             label1.Text = time;
         }
