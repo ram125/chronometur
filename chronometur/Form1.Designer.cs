@@ -33,6 +33,7 @@
             button1 = new Button();
             button2 = new Button();
             timer1 = new System.Windows.Forms.Timer(components);
+            button3 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -68,11 +69,22 @@
             // 
             timer1.Tick += timer1_Tick;
             // 
+            // button3
+            // 
+            button3.Location = new Point(359, 333);
+            button3.Name = "button3";
+            button3.Size = new Size(112, 34);
+            button3.TabIndex = 3;
+            button3.Text = "reset";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label1);
@@ -89,5 +101,6 @@
         private Button button1;
         private Button button2;
         private System.Windows.Forms.Timer timer1;
+        private Button button3;
     }
 }
